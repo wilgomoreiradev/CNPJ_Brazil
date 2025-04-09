@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Início - CNPJ BRAZIL{% endblock %}
+
+{% block content %}
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-8">
+    
+    <!-- Imagem -->
+    <div class="text-center md:text-left">
+      <img src="{{ url_for('static', filename='figura.png') }}" alt="CNPJ Brazil" class="w-full max-w-sm mx-auto md:mx-0 rounded shadow-md">
+    </div>
+
+    <!-- Texto e CTA -->
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Base de Dados do CNPJ pronta para uso</h2>
+      <p class="mb-6 text-lg text-gray-700">Dados limpos e organizados da Receita Federal, ideais para análises, BI, automações e muito mais.</p>
+      <a href="/planos" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Ver Planos</a>
+    </div>
+
+  </div>
+{% endblock %}

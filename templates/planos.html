@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Planos - CNPJ BRAZIL{% endblock %}
+
+{% block content %}
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-2xl font-bold mb-6 text-center">Escolha o plano ideal</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold mb-2">Gratuito</h3>
+        <p class="mb-4">Ideal para testes e análises básicas.</p>
+        <ul class="mb-4 list-disc list-inside text-sm text-gray-700">
+          <li>Dados de empresas ativas</li>
+          <li>Exportação em .csv</li>
+          <li>Download único</li>
+        </ul>
+        <a href="#" class="text-blue-600 font-medium">Baixar versão gratuita</a>
+      </div>
+
+      <div class="bg-white p-6 rounded shadow border border-blue-600">
+        <h3 class="text-xl font-semibold mb-2 text-blue-600">Premium</h3>
+        <p class="mb-4">Para quem precisa de atualizações frequentes e mais filtros.</p>
+        <ul class="mb-4 list-disc list-inside text-sm text-gray-700">
+          <li>Atualizações mensais</li>
+          <li>Filtros por estado, CNAE, porte</li>
+          <li>Separação por região/setor</li>
+        </ul>
+        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Assinar via PIX</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

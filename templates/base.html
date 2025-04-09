@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}CNPJ BRAZIL{% endblock %}</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans text-gray-800 flex flex-col min-h-screen">
+  <nav class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="flex items-center space-x-2">
+      <img src="{{ url_for('static', filename='icone.png') }}" alt="Ícone CNPJ Brazil" class="w-6 h-6">
+      <span class="text-xl font-bold text-blue-600">CNPJ BRAZIL</span>
+    </h1>
+  
+    <div class="space-x-4">
+      <a href="/" class="text-gray-700 hover:text-blue-600">Início</a>
+      <a href="/planos" class="text-gray-700 hover:text-blue-600">Planos</a>
+    </div>
+  </nav>
+
+  <main class="flex-grow p-8">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="bg-white shadow px-4 py-6 text-center text-sm text-gray-600">
+    <p class="mb-2">© {{ current_year }} CNPJ BRAZIL — Dados públicos organizados para você.</p>
+    
+    <div class="mb-2 space-x-4">
+      <a href="/termos" class="hover:underline text-blue-600">Termos de Uso</a>
+      <a href="/privacidade" class="hover:underline text-blue-600">Política de Privacidade</a>
+    </div>
+    
+    <p>
+      Contato: 
+      <a href="mailto:contato@cnpjbrazil.com" class="text-blue-600 hover:underline">
+        contato@cnpjbrazil.com
+      </a>
+    </p>
+  </footer>
+</body>
+</html>
