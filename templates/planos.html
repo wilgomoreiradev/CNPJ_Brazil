@@ -3,30 +3,62 @@
 {% block title %}Planos - CNPJ BRAZIL{% endblock %}
 
 {% block content %}
-  <div class="max-w-4xl mx-auto">
-    <h2 class="text-2xl font-bold mb-6 text-center">Escolha o plano ideal</h2>
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-6 rounded shadow">
-        <h3 class="text-xl font-semibold mb-2">Gratuito</h3>
-        <p class="mb-4">Ideal para testes e análises básicas.</p>
-        <ul class="mb-4 list-disc list-inside text-sm text-gray-700">
-          <li>Dados de empresas ativas</li>
-          <li>Exportação em .csv</li>
-          <li>Download único</li>
-        </ul>
-        <a href="#" class="text-blue-600 font-medium">Baixar versão gratuita</a>
+<div class="max-w-4xl mx-auto px-4">
+  <h2 class="text-2xl font-bold mb-6 text-center">Escolha o plano ideal</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <!-- Plano Gratuito -->
+    <div class="bg-white p-6 rounded shadow text-sm md:text-base">
+      <h3 class="text-xl font-semibold mb-2">Gratuito</h3>
+      <p class="mb-4">Ideal para testes e análises básicas.</p>
+      <ul class="mb-4 list-disc list-inside text-gray-700">
+        <li>Dados de empresas ativas</li>
+        <li>Exportação em .csv</li>
+        <li>Download único</li>
+      </ul>
+      <a href="https://drive.google.com/YOUR_LINK_AQUI" class="text-blue-600 font-medium">Baixar versão gratuita</a>
+    </div>
+
+    <!-- Plano Premium -->
+    <div class="bg-white p-6 rounded shadow border border-blue-600 text-sm md:text-base">
+      <h3 class="text-xl font-semibold mb-2 text-blue-600">Premium</h3>
+      <p class="mb-4">Para quem precisa de atualizações frequentes e mais filtros.</p>
+
+      <ul class="mb-4 list-disc list-inside text-gray-700">
+        <li>Atualizações mensais</li>
+        <li>Filtros por estado, CNAE, porte</li>
+        <li>Separação por região/setor</li>
+      </ul>
+
+      <!-- Valor e instruções -->
+      <div class="mb-4">
+        <p class="font-semibold mb-2">Valor: R$149,99</p>
+        <p class="mb-1">1. Escaneie o QR Code ou copie a chave PIX abaixo.</p>
+        <p class="mb-2">2. Envie o comprovante via WhatsApp clicando no botão.</p>
       </div>
 
-      <div class="bg-white p-6 rounded shadow border border-blue-600">
-        <h3 class="text-xl font-semibold mb-2 text-blue-600">Premium</h3>
-        <p class="mb-4">Para quem precisa de atualizações frequentes e mais filtros.</p>
-        <ul class="mb-4 list-disc list-inside text-sm text-gray-700">
-          <li>Atualizações mensais</li>
-          <li>Filtros por estado, CNAE, porte</li>
-          <li>Separação por região/setor</li>
-        </ul>
-        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Assinar via PIX</a>
+      <!-- QR Code PIX -->
+      <div class="mb-4 text-center">
+        <img src="{{ url_for('static', filename='qrcode_pix.png') }}" alt="QR Code PIX" class="w-40 md:w-48 mx-auto rounded shadow">
       </div>
+
+      <!-- Chave Pix -->
+      <div class="mb-4 text-center">
+        <p class="text-gray-700 mb-1">Chave PIX (copia e cola):</p>
+        <div class="inline-block bg-gray-100 px-3 py-2 rounded font-mono text-gray-800 select-all">
+          wilgomoreira@gmail.com
+        </div>
+      </div>
+
+      <!-- Botão WhatsApp com ícone melhorado -->
+      <a href="https://wa.me/5511999999999?text=Olá!%20Acabei%20de%20pagar%20via%20PIX%20e%20gostaria%20de%20receber%20a%20planilha%20premium%20do%20CNPJ%20BRAZIL." 
+         class="flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+         target="_blank">
+         <img src="{{ url_for('static', filename='whatsapp-icon.png') }}" alt="WhatsApp" class="w-6 h-6">
+         Enviar comprovante via WhatsApp
+      </a>
     </div>
+
   </div>
+</div>
 {% endblock %}
