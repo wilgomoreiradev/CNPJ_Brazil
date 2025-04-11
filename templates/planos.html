@@ -4,7 +4,16 @@
 
 {% block content %}
 <div class="max-w-4xl mx-auto px-4">
+
+  <!-- Aviso geral -->
+  <p class="text-center text-sm text-gray-600 mb-6 max-w-xl mx-auto">
+    ⚠️ <strong>Recomendação:</strong> devido ao tamanho das planilhas, sugerimos que o download e abertura dos arquivos sejam feitos em um <strong>computador</strong> com espaço suficiente e conexão estável. Celulares podem ter dificuldades para abrir ou processar os dados corretamente.
+  </p>
+
+  <!-- Título -->
   <h2 class="text-2xl font-bold mb-6 text-center">Escolha o plano ideal</h2>
+
+  <!-- Grade dos planos -->
   <div class="grid md:grid-cols-2 gap-6">
 
     <!-- Plano Gratuito -->
@@ -13,17 +22,23 @@
       <p class="mb-4">Ideal para testes e análises básicas.</p>
       <ul class="mb-4 list-disc list-inside text-gray-700">
         <li>Dados de empresas ativas</li>
-        <li>Exportação em .csv</li>
+        <li>Exportação em planilha Excel</li>
         <li>Download único</li>
       </ul>
-      <a href="https://drive.google.com/YOUR_LINK_AQUI" class="text-blue-600 font-medium">Baixar versão gratuita</a>
+
+      <!-- Botão com ícone de download -->
+      <a href="https://docs.google.com/spreadsheets/d/1OsnNgE5ICtaEFBJWnYYuaTuTHmbem6q45_BzdwXYSTw/export?format=xlsx" 
+         class="flex items-center gap-2 text-blue-600 font-medium hover:underline"
+         target="_blank">
+         <img src="{{ url_for('static', filename='download-icon.png') }}" alt="Download" class="w-6 h-6">
+         Baixar versão gratuita (.xlsx)
+      </a>
     </div>
 
     <!-- Plano Premium -->
     <div class="bg-white p-6 rounded shadow border border-blue-600 text-sm md:text-base">
       <h3 class="text-xl font-semibold mb-2 text-blue-600">Premium</h3>
       <p class="mb-4">Para quem precisa de atualizações frequentes e mais filtros.</p>
-
       <ul class="mb-4 list-disc list-inside text-gray-700">
         <li>Atualizações mensais</li>
         <li>Filtros por estado, CNAE, porte</li>
@@ -50,8 +65,8 @@
         </div>
       </div>
 
-      <!-- Botão WhatsApp com ícone melhorado -->
-      <a href="https://wa.me/5511999999999?text=Olá!%20Acabei%20de%20pagar%20via%20PIX%20e%20gostaria%20de%20receber%20a%20planilha%20premium%20do%20CNPJ%20BRAZIL." 
+      <!-- Botão WhatsApp com ícone -->
+      <a href="https://wa.me/5579999905291?text=Olá!%20Acabei%20de%20pagar%20via%20PIX%20e%20gostaria%20de%20receber%20a%20planilha%20premium%20do%20CNPJ%20BRAZIL." 
          class="flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
          target="_blank">
          <img src="{{ url_for('static', filename='whatsapp-icon.png') }}" alt="WhatsApp" class="w-6 h-6">

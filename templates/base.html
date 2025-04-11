@@ -4,6 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}CNPJ BRAZIL{% endblock %}</title>
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XTH3ZRGJBV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XTH3ZRGJBV');
+  </script>
+
   <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -13,7 +23,7 @@
       <img src="{{ url_for('static', filename='icone.png') }}" alt="Ícone CNPJ Brazil" class="w-6 h-6">
       <span class="text-xl font-bold text-blue-600">CNPJ BRAZIL</span>
     </h1>
-  
+
     <div class="space-x-4">
       <a href="/" class="text-gray-700 hover:text-blue-600">Início</a>
       <a href="/planos" class="text-gray-700 hover:text-blue-600">Planos</a>
@@ -35,9 +45,10 @@
     <p>
       Contato: 
       <a href="mailto:contato@cnpjbrazil.com" class="text-blue-600 hover:underline">
-        contato@cnpjbrazil.com
+        cnpjbrazil.github@gmail.com
       </a>
     </p>
   </footer>
 </body>
 </html>
+
