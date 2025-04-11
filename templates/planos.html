@@ -28,11 +28,16 @@
 
       <!-- Botão com ícone de download -->
       <a href="https://docs.google.com/spreadsheets/d/1OsnNgE5ICtaEFBJWnYYuaTuTHmbem6q45_BzdwXYSTw/export?format=xlsx" 
-         class="flex items-center gap-2 text-blue-600 font-medium hover:underline"
-         target="_blank">
-         <img src="{{ url_for('static', filename='download-icon.png') }}" alt="Download" class="w-6 h-6">
-         Baixar versão gratuita (.xlsx)
+          class="flex items-center gap-2 text-blue-600 font-medium hover:underline"
+          target="_blank"
+          onclick="gtag('event', 'download_gratuito', {
+            'event_category': 'planos',
+            'event_label': 'baixar_xlsx'
+          });">
+          <img src="{{ url_for('static', filename='download-icon.png') }}" alt="Download" class="w-6 h-6">
+          Baixar versão gratuita (.xlsx)
       </a>
+
     </div>
 
     <!-- Plano Premium -->
@@ -66,11 +71,15 @@
       </div>
 
       <!-- Botão WhatsApp com ícone -->
-      <a href="https://wa.me/5579999905291?text=Olá!%20Acabei%20de%20pagar%20via%20PIX%20e%20gostaria%20de%20receber%20a%20planilha%20premium%20do%20CNPJ%20BRAZIL." 
-         class="flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
-         target="_blank">
-         <img src="{{ url_for('static', filename='whatsapp-icon.png') }}" alt="WhatsApp" class="w-6 h-6">
-         Enviar comprovante via WhatsApp
+      <a href="https://wa.me/5511999999999?text=Olá!%20Acabei%20de%20pagar%20via%20PIX%20e%20gostaria%20de%20receber%20a%20planilha%20premium%20do%20CNPJ%20BRAZIL." 
+        class="flex items-center justify-center gap-2 bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+        target="_blank"
+        onclick="gtag('event', 'clique_whatsapp', {
+          'event_category': 'planos',
+          'event_label': 'comprovante_pix'
+        });">
+        <img src="{{ url_for('static', filename='whatsapp-icon.png') }}" alt="WhatsApp" class="w-6 h-6">
+        Enviar comprovante via WhatsApp
       </a>
     </div>
 
